@@ -1,0 +1,30 @@
+version: '3'
+services: 
+  mongodb:
+    restart: 'always'
+    image: 'mongo'
+    volumes: 
+      - ~/data:/data/db
+    ports:
+      - 27017:27017
+  graph-server: 
+    container_name: graphserver
+    build: ./server
+    volumes: 
+      - ./server:/usr/src/server
+      - /server/node_modules
+    ports: 
+      - 4500:4500
+    depends_on:
+      - mongodb
+  ui:
+    build: ./client
+    volumes:
+      - ./client:/usr/src/ui
+      - /ui/node_modules
+    ports:
+      - 3000:3000
+    container_name: graph_ui
+    depends_on: 
+      - graph-server
+  

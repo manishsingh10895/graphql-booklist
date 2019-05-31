@@ -1,0 +1,24 @@
+{
+  "name": "graphql-playlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-boost": "^0.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.5.5",
+    "react-apollo": "^2.5.6"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
